@@ -71,3 +71,25 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Study 
+
+Pipe
+- Validate data in the request 
+
+Controller
+- route handler in the request 
+
+Service 
+- Run Business logic 
+
+Repository 
+- Access database 
+
+### Services 
+
+uses one or more repo to find or store data 
+
+### Repository 
+
+end up being with typeorm entity, mongoose schema 
