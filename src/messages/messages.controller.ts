@@ -14,9 +14,9 @@ import { MessagesService } from 'src/messages.service';
 export class MessagesController {
   messageService: MessagesService;
 
-  constructor() {
+  constructor(public MessagesService: MessagesService) {
     // do not do this real app;
-    this.messageService = new MessagesService();
+    // this.messageService = new MessagesService();
   }
 
   @Get()

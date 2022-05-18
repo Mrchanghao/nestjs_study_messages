@@ -1,11 +1,17 @@
 import { MessagesRepository } from './messages.repository';
-export class MessagesService {
-  messageRepo: MessagesRepository;
+import { Injectable } from '@nestjs/common';
 
-  constructor() {
-    // service is creating its own deps
-    // do not do this on real app
-    this.messageRepo = new MessagesRepository(); // temp code
+@Injectable()
+export class MessagesService {
+  // messageRepo: MessagesRepository;
+
+  // constructor() {
+  //   // service is creating its own deps
+  //   // do not do this on real app
+  //   this.messageRepo = new MessagesRepository(); // temp code
+  // }
+  constructor(public messageRepo: MessagesRepository) {
+    // this.messageRepo = messageRepo;
   }
 
   findOne(id: string) {
@@ -19,6 +25,4 @@ export class MessagesService {
   create(content: string) {
     return this.messageRepo.create(content);
   }
-  
-
 }
